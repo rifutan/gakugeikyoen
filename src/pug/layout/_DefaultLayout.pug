@@ -77,7 +77,9 @@ html(lang="ja")
         img.loader__img(src="img/loading.gif" alt="Now Loading...")
         p.loader__desc
     .wrapper
+      include /layout/_header
       block ContentBlock
+      include /layout/_footer
 
     // javascript
     block JavascriptBlock

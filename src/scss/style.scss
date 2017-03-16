@@ -185,9 +185,14 @@ a {
   padding-top: 5px;
 }
 
+.footer {
+  margin-top: 30px;
+  border-top: 2px solid #eac193;
+}
+
 .footer__copyright {
-  margin-top: 45px;
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 5px;
   text-align: center;
   font-size: 14px;
 }
@@ -196,6 +201,8 @@ a {
   width: 80%;
   margin: auto;
   margin-top: 50px;
+  padding-bottom: 20px;
+  min-width: 800px;
 }
 
 .contents__title {
@@ -204,9 +211,30 @@ a {
   text-align: center;
 }
 
+.contents__subtitle {
+  font-size: 24px;
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
 .contents__desc {
   padding: 20px;
   box-sizing: border-box;
   color: #fff;
   font-size: 20px;
+  line-height: 1.8em;
+}
+
+.about__desc {
+  line-height: 2em;
+}
+
+.lecturer__name {
+  font-size: 22px;
+}
+
+.lecturer__desc {
+  font-size: 18px;
+  margin-bottom: 30px;
 }
