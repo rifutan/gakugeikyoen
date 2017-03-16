@@ -60,7 +60,7 @@ html(lang="ja")
 
     // stylesheet
     block StylesheetBlock
-      link(rel="stylesheet", href=basePath + "/css/style.css?v="+versions["style.css"])
+      link(rel="stylesheet", href=basePath + "./css/style.css?v="+versions["style.css"])
       div#fb-root
       script.
         (function(d, s, id) {
@@ -81,4 +81,4 @@ html(lang="ja")
 
     // javascript
     block JavascriptBlock
-      script(src=basePath + "/js/script.js?v="+versions["script.js"])
+      script(src=basePath + "./js/script.js?v="+versions["script.js"])
