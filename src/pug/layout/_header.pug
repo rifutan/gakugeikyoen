@@ -1,0 +1,18 @@
+header.header
+  h1.header__logo: a(href="index.html")
+    img(src="img/logo.png" alt="学芸饗宴")
+    p.text-hidden 学芸饗宴
+  h2.header__subtitle 東京大学教養学部 鈴木寛ゼミナール 2017
+  nav.header__menu
+    ul.header__menu__lists
+      li.header__menu__item: a(href="about.html") 学芸饗宴とは
+      li.header__menu__item: a(href="lecturer.html") 講師陣
+      li.header__menu__item: a(href="schedule.html") スケジュール
+      li.header__menu__item: a(href="#") ゼミ生日記
+      li.header__menu__item: a(href="contact.html") お問い合わせ
+      li.header__menu__item: a(href="#") 関係者用ページ
+  .header__share
+    a(href=`http://twitter.com/share?url=${url}&text=${site_name}` onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;" rel="nofollow")
+      img.hearer__share--twi(src="img/share-twi.png" alt="share with Twitter")
+    a(href=`https://www.facebook.com/sharer/sharer.php?u=${url}` onclick="window.open(encodeURI(decodeURI(this.href)), 'FBwindow', 'width=554, height=470, menubar=no, toolbar=no, scrollbars=yes'); return false;" rel="nofollow")
+      img.hearer__share--fb(src="img/share-fb.png" alt="share with Facebook")

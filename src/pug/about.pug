@@ -1,0 +1,24 @@
+extends /layout/_DefaultLayout
+
+prepend ConfigBlock
+  - page_name = ''
+
+//- append StylesheetBlock
+
+//- append JavascriptBlock
+
+block ContentBlock
+  include /layout/_header
+  section.contents
+    h1.contents__title 学芸饗宴とは
+    h2.contents__desc
+      | 大学は必要なのか、反知性主義は問う。
+      br
+      | かの問いへの対抗、それは教養の駒場でこそ成し遂げられるだろう。
+      br
+      | 先見の明に富んだ知の巨人達、表現することの新次元を示す芸術の数々と
+      br
+      | 出逢う場、そこで問い続け、考え続けた学生がこの宴を一番楽しめたものとなり、
+      br
+      | 東京大学と真に出逢うこととなるのだろう。
+  include /layout/_footer
