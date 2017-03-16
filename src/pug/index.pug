@@ -14,7 +14,16 @@ block ContentBlock
       .js-slider-ele: img(data-lazy="img/top.png")
       .js-slider-ele: img(data-lazy="img/top.png")
     h1.top__catchcopy
-      | － 火曜日の夜、学術と芸術を求めんとする若者が駒場に集う －
+      span.ispc －
+      |  火曜日の夜、学術と芸術を
+      br.issp
+      | 求めんとする若者が駒場に集う
+      span.ispc  －
+    .top__share.issp
+      a(href=`http://twitter.com/share?url=${url}&text=${site_name}` onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;" rel="nofollow")
+        img.top__share--twi(src="img/share-twi.png" alt="share with Twitter")
+      a(href=`https://www.facebook.com/sharer/sharer.php?u=${url}` onclick="window.open(encodeURI(decodeURI(this.href)), 'FBwindow', 'width=554, height=470, menubar=no, toolbar=no, scrollbars=yes'); return false;" rel="nofollow")
+        img.top__share--fb(src="img/share-fb.png" alt="share with Facebook")
   article.news
     h1.news__title News & Topic
     ul.news__lists

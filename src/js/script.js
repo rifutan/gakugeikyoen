@@ -27,6 +27,13 @@ $(function(){
   },4000);
 });
 
+if (window.innerWidth < 768) {
+  var centerPadding = '0px';
+} else {
+  var centerPadding = '250px';
+}
+
+
 $(function() {
     $('.js-slider').slick({
       infinite: true,
@@ -37,7 +44,14 @@ $(function() {
       centerMode: true,
       autoplay: true,
       autoplaySpeed: 5000,
-      speed: 800,
+      speed: 1200,
       pauseOnHover: false,
+      centerPadding: centerPadding,
     });
+});
+
+$(function() {
+  $('.js_menu_sp').click(function(){
+    $('header').toggleClass('js_nav_open');
+  });
 });

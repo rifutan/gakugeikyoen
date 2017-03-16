@@ -12485,6 +12485,12 @@ function stopload() {}
   }, 4000);
 });
 
+if (window.innerWidth < 768) {
+  var centerPadding = '0px';
+} else {
+  var centerPadding = '250px';
+}
+
 (0, _jquery2.default)(function () {
   (0, _jquery2.default)('.js-slider').slick({
     infinite: true,
@@ -12495,8 +12501,15 @@ function stopload() {}
     centerMode: true,
     autoplay: true,
     autoplaySpeed: 5000,
-    speed: 800,
-    pauseOnHover: false
+    speed: 1200,
+    pauseOnHover: false,
+    centerPadding: centerPadding
+  });
+});
+
+(0, _jquery2.default)(function () {
+  (0, _jquery2.default)('.js_menu_sp').click(function () {
+    (0, _jquery2.default)('header').toggleClass('js_nav_open');
   });
 });
 
