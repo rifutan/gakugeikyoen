@@ -14,8 +14,8 @@ $(function() {
 $(window).load(function () {
   $('.loader').delay(1000).fadeOut(800);
   $('.loader__inner').delay(1000).fadeOut(300);
-  $('.loader, .loader__inner').delay(2000).css('display','none');
   $('.wrapper').css('display', 'block');
+  setTimeout('loaderNone()', 2000);
 });
 
 function stopload(){
@@ -25,8 +25,13 @@ $(function(){
     $('.wrapper').css('display','block');
     $('.loader').delay(300).fadeOut(800);
     $('.loader__inner').delay(300).fadeOut(300);
+    setTimeout('loaderNone()', 1200);
   },4000);
 });
+
+function loaderNone() {
+  $('.loader, .loader__inner').css('display','none');
+}
 
 if (window.innerWidth < 768) {
   var centerPadding = '0px';
