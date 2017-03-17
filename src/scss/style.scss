@@ -94,19 +94,23 @@ a {
 .header {
   width: 100%;
   box-sizing: border-box;
-  position: relative;
+  position: fixed;
   border-bottom: 2px solid #eac193;
   background-color: #000;
   z-index: 100;
-  transition: 0.6s ease;
   @include pc-layout {
+    top: 0px;
+    height: 215px;
     padding: 20px 30px 15px 30px;
+    &, * {
+      transition: all 0.6s ease;
+    }
   }
   @include sp-layout {
-    position: fixed;
     height: 80px;
     top: 0px;
     overflow-y: hidden;
+    transition: 0.6s ease;
   }
 }
 
@@ -143,7 +147,9 @@ a {
 }
 
 .header__menu {
-  transition: 0.6s ease;
+  @include sp-layout {
+    transition: 0.6s ease;
+  }
   @include pc-layout {
     width: 100%;
     margin-top: 25px;
@@ -285,6 +291,50 @@ a {
   }
 }
 
+.header.smaller {
+  height: 120px;
+  .header__logo {
+    width: 180px;
+    height: 60px;
+  }
+  .header__subtitle {
+    font-size: 16px;
+    position: absolute;
+    top: 45px;
+    left: 240px;
+  }
+  .header__menu {
+    margin-top: 0px;
+  }
+  .header__menu__item {
+    font-size: 15px;
+  }
+  .header__share {
+    top: 20px;
+  }
+  .header__share--twi {
+    width: 30px;
+    height: 30px;
+    img {
+      @extend .img_default;
+    }
+  }
+  .header__share--fb {
+    width: 30px;
+    height: 30px;
+    img {
+      @extend .img_default;
+    }
+  }
+}
+
+.main {
+  @include pc-layout {
+    margin-top: 215px;
+  }
+}
+
+
 .top {
   @include sp-layout {
     margin-top: 80px;
@@ -387,7 +437,7 @@ a {
 
 .contents {
   margin: auto;
-  margin-top: 50px;
+  padding-top: 50px;
   padding-bottom: 20px;
   @include pc-layout {
     width: 80%;

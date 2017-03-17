@@ -12491,7 +12491,7 @@ function loaderNone() {
   (0, _jquery2.default)('.loader, .loader__inner').css('display', 'none');
 }
 
-if (window.innerWidth < 768) {
+if (window.innerWidth <= 800) {
   var centerPadding = '0px';
 } else {
   var centerPadding = '250px';
@@ -12516,6 +12516,17 @@ if (window.innerWidth < 768) {
 (0, _jquery2.default)(function () {
   (0, _jquery2.default)('.js_menu_sp').click(function () {
     (0, _jquery2.default)('header').toggleClass('js_nav_open');
+  });
+});
+
+(0, _jquery2.default)(window).load(function () {
+  var px_change = 50;
+  window.addEventListener('scroll', function (e) {
+    if ((0, _jquery2.default)(window).scrollTop() > px_change && window.innerWidth > 800) {
+      (0, _jquery2.default)(".header").addClass("smaller");
+    } else if ((0, _jquery2.default)(".header").hasClass("smaller")) {
+      (0, _jquery2.default)(".header").removeClass("smaller");
+    }
   });
 });
 

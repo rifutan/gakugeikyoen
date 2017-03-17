@@ -33,7 +33,7 @@ function loaderNone() {
   $('.loader, .loader__inner').css('display','none');
 }
 
-if (window.innerWidth < 768) {
+if (window.innerWidth <= 800) {
   var centerPadding = '0px';
 } else {
   var centerPadding = '250px';
@@ -59,5 +59,16 @@ $(function() {
 $(function() {
   $('.js_menu_sp').click(function(){
     $('header').toggleClass('js_nav_open');
+  });
+});
+
+$(window).load(function() {
+  var px_change = 50;
+  window.addEventListener('scroll', function(e) {
+    if ( $(window).scrollTop() > px_change && window.innerWidth > 800) {
+      $(".header").addClass("smaller");
+    } else if ($(".header").hasClass("smaller")) {
+      $(".header").removeClass("smaller");
+    }
   });
 });
