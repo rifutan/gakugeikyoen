@@ -13,12 +13,12 @@ header.header
      span.nav-toggle__ele MENU
   nav.header__menu
     ul.header__menu__lists
-      li.header__menu__item: a(href="about.html") 学芸饗宴とは
-      li.header__menu__item: a(href="lecturer.html") 講師陣
-      li.header__menu__item: a(href="schedule.html") スケジュール
-      li.header__menu__item: a(href="#") ゼミ生日記
-      li.header__menu__item: a(href="contact.html") お問い合わせ
-      li.header__menu__item: a(href="#") 関係者用ページ
+      a(href="about.html"): li.header__menu__item 学芸饗宴とは
+      a(href="lecturer.html"): li.header__menu__item 講師陣
+      a(href="schedule.html"): li.header__menu__item スケジュール
+      a(href="#"): li.header__menu__item ゼミ生日記
+      a(href="contact.html"): li.header__menu__item お問い合わせ
+      a(href="#"): li.header__menu__item 関係者用ページ
   .header__share
     a(href=`http://twitter.com/share?url=${url}&text=${site_name}` onClick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=650, height=470, personalbar=0, toolbar=0, scrollbars=1, sizable=1'); return false;" rel="nofollow")
       img.hearer__share--twi(src="img/share-twi.png" alt="share with Twitter")
