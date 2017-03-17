@@ -12473,6 +12473,7 @@ var loader_desc_num = Math.floor(Math.random() * loader_desc.length);
 (0, _jquery2.default)(window).load(function () {
   (0, _jquery2.default)('.loader').delay(1000).fadeOut(800);
   (0, _jquery2.default)('.loader__inner').delay(1000).fadeOut(300);
+  (0, _jquery2.default)('.loader, .loader__inner').delay(2000).css('display', 'none');
   (0, _jquery2.default)('.wrapper').css('display', 'block');
 });
 

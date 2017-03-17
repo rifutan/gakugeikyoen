@@ -14,6 +14,7 @@ $(function() {
 $(window).load(function () {
   $('.loader').delay(1000).fadeOut(800);
   $('.loader__inner').delay(1000).fadeOut(300);
+  $('.loader, .loader__inner').delay(2000).css('display','none');
   $('.wrapper').css('display', 'block');
 });
 
